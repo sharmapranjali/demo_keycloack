@@ -1403,3 +1403,94 @@ h1#kc-page-title {
     height: auto;
     border: 1px solid #BABABC;
 }
+#kc-register-form #kc-form-options a {
+
+    display: inline-block;
+
+}
+
+
+
+#kc-social-providers #social-google i::before,
+
+#kc-social-providers #social-facebook i::before {
+
+    display: none;
+
+}
+
+
+
+#kc-social-providers #social-google i,
+
+#kc-social-providers #social-facebook i {
+
+    width: 24px;
+
+    height: 24px;
+
+    background-position: center center;
+
+    display: inline-block;
+
+}
+
+
+
+#kc-social-providers #social-google i {
+
+    background-image: url(https://cdn5.ezmall.com/0/india-sso/images/google.png);
+
+    display: inline-block;
+
+}
+
+
+
+#kc-social-providers #social-facebook i {
+
+    background-image: url(https://cdn5.ezmall.com/0/india-sso/images/fb.png);
+
+}
+
+
+
+#kc-social-providers #social-google span,
+
+#kc-social-providers #social-facebook span {
+
+    font-size: 0px;
+
+}
+
+
+
+#kc-social-providers #social-google span::before {
+
+    content: "Login with Google";
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+
+#kc-social-providers #social-facebook span::before {
+
+    content: "Login with Facebook";
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+.oloeSecComp img {
+
+    height: auto;
+
+    width: auto;
+
+}
