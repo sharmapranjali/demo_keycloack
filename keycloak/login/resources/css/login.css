@@ -1,4 +1,3 @@
-
 /* Patternfly CSS places a "bg-login.jpg" as the background on this ".login-pf" class.
    This test clashes with the "keycloak-bg.png' background defined on the body below.
    Therefore the Patternfly background must be set to none. */
@@ -7,9 +6,9 @@
 }
 
 .login-pf body {
-  /*  background: url("../img/keycloak-bg.png") no-repeat center center fixed !important;
+    /*  background: url("../img/keycloak-bg.png") no-repeat center center fixed !important;
     background-size: cover !important;*/
-	
+
     height: 100%;
 }
 
@@ -18,7 +17,8 @@
     font-size: 14px;
     font-size: var(--pf-global--FontSize--sm);
     border-width: 1px;
-    border-width: var(--pf-global--BorderWidth--sm);;
+    border-width: var(--pf-global--BorderWidth--sm);
+    ;
     border-color: #EDEDED #EDEDED #8A8D90 #EDEDED;
     border-color: var(--pf-global--BorderColor--300) var(--pf-global--BorderColor--300) var(--pf-global--BorderColor--200) var(--pf-global--BorderColor--300);
     background-color: #FFFFFF;
@@ -30,10 +30,11 @@
 }
 
 textarea.pf-c-form-control {
-	height: auto;
+    height: auto;
 }
 
-.pf-c-form-control:hover, .pf-c-form-control:focus {
+.pf-c-form-control:hover,
+.pf-c-form-control:focus {
     border-bottom-color: #0066CC;
     border-bottom-color: var(--pf-global--primary-color--100);
     border-bottom-width: 2px;
@@ -47,13 +48,15 @@ textarea.pf-c-form-control {
     border-bottom-width: var(--pf-global--BorderWidth--md);
 }
 
-.pf-c-check__label, .pf-c-radio__label {
-	font-size: 14px;
-	font-size: var(--pf-global--FontSize--sm);
+.pf-c-check__label,
+.pf-c-radio__label {
+    font-size: 14px;
+    font-size: var(--pf-global--FontSize--sm);
 }
 
 .pf-c-alert.pf-m-inline {
-    margin-bottom: 0.5rem; /* default - IE compatibility */
+    margin-bottom: 0.5rem;
+    /* default - IE compatibility */
     margin-bottom: var(--pf-global--spacer--sm);
     padding: 0.25rem;
     padding: var(--pf-global--spacer--xs);
@@ -64,7 +67,7 @@ textarea.pf-c-form-control {
     display: -ms-flexbox;
     display: grid;
     -ms-grid-columns: max-content 1fr max-content;
-    grid-template-columns:max-content 1fr max-content;
+    grid-template-columns: max-content 1fr max-content;
     grid-template-columns: var(--pf-c-alert--grid-template-columns);
     grid-template-rows: 1fr auto;
     grid-template-rows: var(--pf-c-alert--grid-template-rows);
@@ -137,14 +140,15 @@ textarea.pf-c-form-control {
 }
 
 .pf-c-alert__title {
-    font-size: 14px; /* default - IE compatibility */
+    font-size: 14px;
+    /* default - IE compatibility */
     font-size: var(--pf-global--FontSize--sm);
     padding: 5px 8px;
     padding: var(--pf-c-alert__title--PaddingTop) var(--pf-c-alert__title--PaddingRight) var(--pf-c-alert__title--PaddingBottom) var(--pf-c-alert__title--PaddingLeft);
 }
 
-.pf-c-button{
-    padding:0.375rem 1rem;
+.pf-c-button {
+    padding: 0.375rem 1rem;
     padding: var(--pf-global--spacer--form-element) var(--pf-global--spacer--md);
 }
 
@@ -167,6 +171,7 @@ textarea.pf-c-form-control {
     border: solid var(--pf-global--BorderWidth--sm);
     border-color: rgba(230, 230, 230, 0.5);
 }
+
 /*End of IE compatibility*/
 h1#kc-page-title {
     margin-top: 10px;
@@ -181,12 +186,12 @@ h1#kc-page-title {
     padding: 0;
 }
 
-#kc-locale-dropdown{
+#kc-locale-dropdown {
     display: inline-block;
 }
 
 #kc-locale-dropdown:hover ul {
-    display:block;
+    display: block;
 }
 
 /* IE compatibility */
@@ -257,7 +262,7 @@ div.kc-logo-text span {
 
 #kc-username {
     text-align: center;
-    margin-bottom:-10px;
+    margin-bottom: -10px;
 }
 
 #kc-webauthn-settings-form {
@@ -337,7 +342,8 @@ div.kc-logo-text span {
 }
 
 .required {
-    color: #A30000; /* default - IE compatibility */
+    color: #A30000;
+    /* default - IE compatibility */
     color: var(--pf-global--danger-color--200);
 }
 
@@ -351,8 +357,8 @@ ul#kc-totp-supported-apps {
 }
 
 #kc-totp-secret-qr-code {
-    max-width:150px;
-    max-height:150px;
+    max-width: 150px;
+    max-height: 150px;
 }
 
 #kc-totp-secret-key {
@@ -408,12 +414,14 @@ ul#kc-totp-supported-apps {
 }
 
 .kc-social-gray {
-    color: #737679; /* default - IE compatibility */
+    color: #737679;
+    /* default - IE compatibility */
     color: var(--pf-global--Color--200);
 }
 
 .kc-social-item {
-    margin-bottom: 0.5rem; /* default - IE compatibility */
+    margin-bottom: 0.5rem;
+    /* default - IE compatibility */
     margin-bottom: var(--pf-global--spacer--sm);
     font-size: 15px;
     text-align: center;
@@ -429,7 +437,7 @@ ul#kc-totp-supported-apps {
 }
 
 .kc-social-grid {
-    display:grid;
+    display: grid;
     grid-column-gap: 10px;
     grid-row-gap: 5px;
     grid-column-end: span 6;
@@ -449,32 +457,32 @@ ul#kc-totp-supported-apps {
     text-align: center;
 }
 
-.kc-social-section hr{
+.kc-social-section hr {
     margin-bottom: 10px
 }
 
-.kc-login-tooltip .kc-tooltip-text{
-    top:-3px;
-    left:160%;
+.kc-login-tooltip .kc-tooltip-text {
+    top: -3px;
+    left: 160%;
     background-color: black;
     visibility: hidden;
     color: #fff;
 
-    min-width:130px;
+    min-width: 130px;
     text-align: center;
     border-radius: 2px;
-    box-shadow:0 1px 8px rgba(0,0,0,0.6);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
     padding: 5px;
 
     position: absolute;
-    opacity:0;
-    transition:opacity 0.5s;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 /* Show tooltip */
 .kc-login-tooltip:hover .kc-tooltip-text {
     visibility: visible;
-    opacity:0.7;
+    opacity: 0.7;
 }
 
 /* Arrow for tooltip */
@@ -610,15 +618,16 @@ ul#kc-totp-supported-apps {
         flex-basis: 100%;
     }
 }
+
 /* End of IE11 workaround for select-authenticator screen */
 
-.select-auth-box-arrow{
+.select-auth-box-arrow {
     display: flex;
     align-items: center;
     margin-right: 2rem;
 }
 
-.select-auth-box-icon{
+.select-auth-box-icon {
     display: flex;
     flex: 0 0 2em;
     justify-content: center;
@@ -626,14 +635,14 @@ ul#kc-totp-supported-apps {
     margin-left: 3rem;
 }
 
-.select-auth-box-parent{
+.select-auth-box-parent {
     border-top: 1px solid var(--pf-global--palette--black-200);
     padding-top: 1rem;
     padding-bottom: 1rem;
     cursor: pointer;
 }
 
-.select-auth-box-parent:hover{
+.select-auth-box-parent:hover {
     background-color: #f7f8f8;
 }
 
@@ -663,7 +672,8 @@ ul#kc-totp-supported-apps {
     padding: 0 20px;
     max-width: 500px;
     border-top: 4px solid;
-    border-color: #0066CC; /* default - IE compatibility */
+    border-color: #0066CC;
+    /* default - IE compatibility */
     border-color: var(--pf-global--primary-color--100);
 }
 
@@ -692,6 +702,7 @@ ul#kc-totp-supported-apps {
     font-size: 15px;
     color: #72767b;
 }
+
 #kc-content-wrapper .row {
     margin-left: 0;
     margin-right: 0;
@@ -732,9 +743,11 @@ ul#kc-totp-supported-apps {
 .kc-recovery-codes-warning {
     margin-bottom: 32px;
 }
+
 .kc-recovery-codes-warning .pf-c-alert__description p {
     font-size: 0.875rem;
 }
+
 .kc-recovery-codes-list {
     list-style: none;
     columns: 2;
@@ -742,10 +755,12 @@ ul#kc-totp-supported-apps {
     padding: 16px 16px 8px 16px;
     border: 1px solid #D2D2D2;
 }
+
 .kc-recovery-codes-list li {
     margin-bottom: 8px;
     font-size: 11px;
 }
+
 .kc-recovery-codes-list li span {
     color: #6A6E73;
     width: 16px;
@@ -757,9 +772,11 @@ ul#kc-totp-supported-apps {
 .kc-recovery-codes-actions {
     margin-bottom: 24px;
 }
+
 .kc-recovery-codes-actions button {
     padding-left: 0;
 }
+
 .kc-recovery-codes-actions button i {
     margin-right: 8px;
 }
@@ -770,22 +787,25 @@ ul#kc-totp-supported-apps {
 }
 
 
-.clear{
+.clear {
     clear: both;
 }
+
 .login-pf body {
-   /* background: #37176E url(../img/bg.jpg) no-repeat center center fixed;
+    /* background: #37176E url(../img/bg.jpg) no-repeat center center fixed;
     background-size: cover;*/
-	background: #eee !important;
+    background: #eee !important;
     min-height: 100vh;
     height: 100%;
 }
+
 .login-pf-page {
     position: relative;
     padding: 30px;
-	height:100%;
+    height: 100%;
 }
-.card-pf{
+
+.card-pf {
     display: block;
     background: #fff;
     border-radius: 20px;
@@ -796,50 +816,59 @@ ul#kc-totp-supported-apps {
     box-shadow: 0px 10px 15px rgb(0 0 0 / 10%);
     margin: auto;
 }
-.card-pf .login-pf-header{
+
+.card-pf .login-pf-header {
     margin: 0 0 25px;
     font-weight: 400;
     text-transform: capitalize;
 }
-.login-pf-header h1{
+
+.login-pf-header h1 {
     margin: 0;
     font-size: 24px;
     font-weight: 400;
 }
+
 #kc-form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 100%;
 }
-#kc-form-wrapper{
+
+#kc-form-wrapper {
     width: 100%;
 }
-#kc-content-wrapper .form-group{
+
+#kc-content-wrapper .form-group {
     margin: 0 0 15px;
     text-align: left;
 }
-#kc-content-wrapper .pf-c-form-control{
+
+#kc-content-wrapper .pf-c-form-control {
     width: 100%;
     height: 40px;
     border: 1px solid #eee;
     border-radius: 40px;
     padding: 0 15px;
 }
-#kc-content-wrapper .pf-c-form-control:focus{
+
+#kc-content-wrapper .pf-c-form-control:focus {
     outline: 0;
     border: 1px solid #ccc;
 }
+
 #kc-content-wrapper .form-group label,
-#kc-content-wrapper .form-group .pf-c-form__label{
+#kc-content-wrapper .form-group .pf-c-form__label {
     display: block;
     font-size: 14px;
     margin: 0 0 5px;
     font-weight: 400;
     text-transform: capitalize;
 }
+
 #kc-form-buttons input,
-#kc-form-buttons input:focus{
+#kc-form-buttons input:focus {
     width: 100%;
     height: 40px;
     padding: 0 15px;
@@ -850,25 +879,30 @@ ul#kc-totp-supported-apps {
     font-weight: 400;
     cursor: pointer;
 }
+
 #kc-form-buttons #kc-login,
-#kc-form-buttons input{
+#kc-form-buttons input {
     background: #dda408;
     color: #fff;
 }
+
 #kc-info {
     width: 100%;
     font-size: 14px;
     margin-top: 15px;
 }
-#kc-info #kc-registration a{
+
+#kc-info #kc-registration a {
     text-decoration: none;
     text-transform: uppercase;
     color: #f33;
     font-size: 12px;
 }
-#kc-info #kc-registration a:hover{
+
+#kc-info #kc-registration a:hover {
     color: #000;
 }
+
 #kc-social-providers {
     position: relative;
     width: 100%;
@@ -879,8 +913,9 @@ ul#kc-totp-supported-apps {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
 }
+
 #kc-social-providers hr {
     background: #eee;
     border: 0;
@@ -889,6 +924,7 @@ ul#kc-totp-supported-apps {
     width: 100%;
     margin: 25px 0;
 }
+
 #kc-social-providers h4 {
     margin: 0;
     background: #fff;
@@ -900,6 +936,7 @@ ul#kc-totp-supported-apps {
     padding: 0 10px;
     font-weight: normal;
 }
+
 #kc-social-providers ul {
     margin: 0;
     padding: 0;
@@ -910,53 +947,63 @@ ul#kc-totp-supported-apps {
     padding-top: 10px;
     width: 100%;
 }
-#kc-social-providers ul a{
-   padding: 0 15px;
-   margin: 0;
-   height: 40px;
-   border-radius: 40px;
-   text-decoration: none;
-   color: #fff;
-   border: 0;
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-   -webkit-box-pack: center;
-   -ms-flex-pack: center;
-   justify-content: center;
-   -webkit-box-align: center;
-   -ms-flex-align: center;
-   align-items: center;
+
+#kc-social-providers ul a {
+    padding: 0 15px;
+    margin: 0;
+    height: 40px;
+    border-radius: 40px;
+    text-decoration: none;
+    color: #fff;
+    border: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
-#kc-social-providers a + a{
+
+#kc-social-providers a+a {
     margin-top: 10px;
 }
-#kc-social-providers a span{
+
+#kc-social-providers a span {
     margin-left: 5px;
 }
-#kc-social-providers #social-google{
+
+#kc-social-providers #social-google {
     background: #f33;
 }
-#kc-social-providers #social-facebook{
+
+#kc-social-providers #social-facebook {
     background: #06f;
 }
+
 #kc-register-form {
     text-align: left;
 }
+
 #kc-form-options a {
     text-decoration: none;
     text-transform: uppercase;
     color: #f33;
     font-size: 12px;
 }
-#kc-register-form #kc-form-options a{
+
+#kc-register-form #kc-form-options a {
     margin-bottom: 15px;
     display: block;
 }
+
 .logoBox {
     margin-bottom: 25px;
 }
-.logoBox img{
+
+.logoBox img {
     max-width: 120px;
 }
 
@@ -967,22 +1014,27 @@ ul#kc-totp-supported-apps {
 #kc-register-form #kc-terms-text {
     margin: 0;
 }
+
 #kc-register-form #kc-form-options {
     margin-top: 20px;
     font-size: 12px;
     text-align: center;
+    margin-bottom: 50px;
 }
+
 #kc-register-form #kc-terms-text label {
     font-size: 12px;
     margin: 0;
 }
+
 #kc-register-form #kc-form-options a {
     font-size: 12px;
     display: inline-block;
     margin-bottom: 0 !important;
 }
 
-#kc-register-form #kc-terms-text label a, #kc-register-form #kc-terms-text label a:hover {
+#kc-register-form #kc-terms-text label a,
+#kc-register-form #kc-terms-text label a:hover {
     color: #f33;
     text-decoration: none;
     font-weight: normal;
@@ -991,23 +1043,27 @@ ul#kc-totp-supported-apps {
 
 
 
-.login-pf, .login-pf body, .login-pf-page {
+.login-pf,
+.login-pf body,
+.login-pf-page {
     min-height: 100vh;
     height: auto;
 }
+
 .login-pf-page {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -ms-flex-line-pack: center;
-        align-content: center;
+    align-content: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
+
 div.login-pf-page .card-pf {
     transform: inherit;
     top: inherit;
@@ -1018,81 +1074,256 @@ div.login-pf-page .card-pf {
 
 
 @media screen and (max-width:767px) {
-    .login-pf-page{
+    .login-pf-page {
         padding: 15px;
     }
 
-#kc-social-providers ul a i {
-float: none;
-display: inline-block;
-color: #fff;
-width: auto;
-height: auto;
-font-size: 16px;
-}
+    #kc-social-providers ul a i {
+        float: none;
+        display: inline-block;
+        color: #fff;
+        width: auto;
+        height: auto;
+        font-size: 16px;
+    }
 
-#kc-social-providers a span {
-margin-left: 5px;
-left: inherit;
-top: inherit;
-font-size: 14px;
-}
+    #kc-social-providers a span {
+        margin-left: 5px;
+        left: inherit;
+        top: inherit;
+        font-size: 14px;
+    }
 
-#kc-social-providers h4 {
-margin: 0;
-background: #fff;
-width: auto;
-position: absolute;
-top: 18px;
-left: 50%;
-transform: translateX(-50%);
-padding: 0 10px;
-font-weight: normal;
-font-size: 12px;
-color: #333;
-}
+    #kc-social-providers h4 {
+        margin: 0;
+        background: #fff;
+        width: auto;
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0 10px;
+        font-weight: normal;
+        font-size: 12px;
+        color: #333;
+    }
 
-#kc-social-providers ul {
-margin: 0;
-padding: 0;
-list-style: none;
-font-size: 14px;
-text-transform: uppercase;
-display: block;
-padding-top: 0;
-width: 100%;
-}
+    #kc-social-providers ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+        text-transform: uppercase;
+        display: block;
+        padding-top: 0;
+        width: 100%;
+    }
 
-#kc-info {
-width: 100%;
-font-size: 14px;
-margin: 0;
-}
+    #kc-info {
+        width: 100%;
+        font-size: 14px;
+        margin: 0;
+    }
 
-#kc-info-wrapper {
-font-size: 13px;
-padding: 15px 35px;
-background-color: transparent;
-}
+    #kc-info-wrapper {
+        font-size: 13px;
+        padding: 15px 35px;
+        background-color: transparent;
+    }
 
-#kc-register-form #kc-form-options a {
-margin-bottom: 0;
-display: block;
-}
+    #kc-register-form #kc-form-options a {
+        margin-bottom: 0;
+        display: block;
+    }
 
 
 
-#kc-register-form .form-group > div {
-padding: 0;
-}
+    #kc-register-form .form-group>div {
+        padding: 0;
+    }
 
-#kc-content-wrapper .form-group.login-pf-settings {
-margin: 0;
-}
+    #kc-content-wrapper .form-group.login-pf-settings {
+        margin: 0;
+    }
 
-#kc-social-providers ul a::after {
-display: none;
+    #kc-social-providers ul a::after {
+        display: none;
+    }
 }
 
 /* End Recovery codes */
+div.login-pf-page .card-pf {
+    border-radius: 4px;
+    padding: 20px;
+}
+.logoBox {
+    display: none;
+}
+h1#kc-page-title {
+    margin: 50px 0;
+    color: #2131BE;
+}
+#kc-content-wrapper .form-group {
+    position: relative;
+}
+#kc-content-wrapper .pf-c-form-control {
+    width: 100%;
+    height: 54px;
+    border: 1px solid #BABABC;
+    border-radius: 4px;
+    padding: 0 15px;
+    transition: all ease-in-out 0.3s;
+    font-size: 18px;
+}
+#kc-content-wrapper .pf-c-form-control:focus{
+    border: 1px solid #2131BE;
+}
+#kc-content-wrapper .pf-c-form-control.success {
+    border: 1px solid #06B145;
+}
+#kc-content-wrapper .pf-c-form-control[aria-invalid="true"] {
+    border: 1px solid #B10606;
+}
+#kc-content-wrapper .pf-c-form__helper-text.pf-m-error {
+    color: #B10606;
+}
+#kc-content-wrapper .form-group label,
+#kc-content-wrapper .form-group .pf-c-form__label {
+    display: block;
+    font-size: 13px;
+    margin: 0;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #2131BE;
+    position: absolute;
+    background: #fff;
+    padding: 0 5px;
+    top: -10px;
+    left: 10px;
+    z-index: 9;
+}
+#kc-form-buttons #kc-login,
+#kc-form-buttons input {
+    height: 54px;
+    border-radius: 4px;
+    background: #2131BE;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+#kc-form-buttons #kc-login[disabled],
+#kc-form-buttons input[disabled]{
+    background: #5262EC;
+    color: #9FA9FC;
+}
+#kc-social-providers ul a,
+#kc-form-buttons input:focus{
+    height: 54px;
+    border-radius: 4px;
+}
+#kc-social-providers #social-google,
+#kc-social-providers #social-facebook {
+    background: #F2F4F8;
+    color: #8993AD;
+    text-transform: capitalize;
+}
+#kc-social-providers ul a i{
+    color: #8993AD;
+}
+#kc-social-providers hr{
+    background: #000;
+}
+#kc-social-providers h4 {
+    text-transform: none;
+    font-size: 16px;
+    font-weight: bold;
+    top: 16px;
+}
+#kc-info #kc-info-wrapper {
+    font-size: 15px;
+    color: #000;
+}
+#kc-info #kc-registration a {
+    text-decoration: none;
+    text-transform: none;
+    color: #036AF5;
+    font-size: 15px;
+}
 
+
+
+#kc-content #kc-content-wrapper {
+    position: relative;
+}
+#kc-content #kc-content-wrapper #kc-form{
+    padding-top: 200px;
+}
+#kc-social-providers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+#kc-social-providers ul {
+    padding-top: 0;
+}
+.orSec {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+#kc-info #kc-info-wrapper {
+    padding: 50px 0 40px;
+}
+.oloeSec h3 {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 25px;
+}
+.oloeSecComp {
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    
+    scrollbar-width: none;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+}
+.oloeSecComp::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+.oloeSecComp li {
+    flex: 0 0 auto;
+}
+.oloeSecComp li + li {
+    margin-left: 10px;
+}
+.oloeSecComp img {
+    height: 24px;
+    width: auto;
+}
+.securityInfoSec {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    margin: 30px 0 25px;
+}
+.securityInfoSec span {
+    flex: 0 0 100%;
+    color: #009844;
+    line-height: normal;
+    font-size: 10px;
+}
+.securityInfoSec span.securityIcon {
+    max-width: 20px;
+    margin-right: 5px;
+}
+.securityInfoSec img {
+    width: 100%;
+    height: auto;
+}
