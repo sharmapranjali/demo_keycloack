@@ -147,24 +147,6 @@
                       <#nested "info">
                   </div>
               </div>
-              <div class="oloeSec">
-                <h3>one login one ecosystem</h3>
-                <ul class="oloeSecComp">
-                    <li><img src="https://cdn5.ezmall.com/0/india-sso/images/zee-news.svg" alt="" /></li>
-                    <li><img src="https://cdn5.ezmall.com/0/india-sso/images/zee-hindustan.svg" alt="" /></li>
-                    <li><img src="https://cdn5.ezmall.com/0/india-sso/images/zee-business.png" alt="" /></li>
-                    <li><img src="https://cdn5.ezmall.com/0/india-sso/images/wion.png" alt="" /></li>
-                    <li><img src="https://cdn5.ezmall.com/0/india-sso/images/health.svg" alt="" /></li>
-                   <!-- <li><img src="https://cdn5.ezmall.com/0/india-sso/images/" alt="" /></li>
-                    <li><img src="https://cdn5.ezmall.com/0/india-sso/images/" alt="" /></li>-->
-                    <li><img src="https://cdn5.ezmall.com/0/india-sso/images/bollywood.png" alt="" /></li>
-                   <li><img src="https://cdn5.ezmall.com/0/india-sso/images/cricket.svg" alt="" /></li>
-                </ul>
-            </div>
-            <div class="securityInfoSec">
-                <span class="securityIcon"><img src="https://cdn5.ezmall.com/0/india-sso/images/security-icon.png" alt="" /></span>
-                <span>Your Personal Information is 100% secured with us. We do not share your data with any third party</span>
-            </div>
           </#if>
         </div>
       </div>
