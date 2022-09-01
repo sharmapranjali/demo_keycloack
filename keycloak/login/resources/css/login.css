@@ -1365,3 +1365,41 @@ h1#kc-page-title {
     color: #036AF5;
     text-decoration: none;
 }
+
+#kc-register-form #kc-form-options {
+    margin: 50px 0 40px;
+    font-size: 16px;
+    text-align: center;
+}
+#kc-register-form #kc-form-options a{
+    font-size: 16px;
+}
+.orSec {
+    margin-top: 10px;
+}
+#kc-register-form #ssoTermsCondition {
+    margin-top: 20px;
+}
+#kc-form-login #kc-form-options {
+    padding: 0px 0 25px;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    text-align: right;
+    color: #373636;
+}
+#kc-form-login #kc-form-options label {
+    left: inherit;
+    top: inherit;
+    position: relative;
+    color: #373636;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+#kc-form-login #kc-form-options label #rememberMe {
+    padding: 0;
+    margin: 0 5px 0;
+    height: auto;
+    border: 1px solid #BABABC;
+}
