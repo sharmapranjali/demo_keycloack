@@ -22,7 +22,25 @@
                 </div>
             </div>
 
-            <div class="${properties.kcFormGroupClass!}">
+<!--             <div class="${properties.kcFormGroupClass!}">
+                <div class="${properties.kcLabelWrapperClass!}">
+                    <label for="middleName" class="${properties.kcLabelClass!}">${msg("middleName")}</label>
+                </div>
+                <div class="${properties.kcInputWrapperClass!}">
+                    <input type="text" id="middleName" class="${properties.kcInputClass!}" name="middleName"
+                           value="${(register.formData.middleName!'')}"
+                           aria-invalid="<#if messagesPerField.existsError('middleName')>true</#if>"
+                    />
+
+                    <#if messagesPerField.existsError('middleName')>
+                        <span id="input-error-middlename" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
+                            ${kcSanitize(messagesPerField.get('middleName'))?no_esc}
+                        </span>
+                    </#if>
+                </div>
+            </div>
+
+    -->        <div class="${properties.kcFormGroupClass!}">
                 <div class="${properties.kcLabelWrapperClass!}">
                     <label for="lastName" class="${properties.kcLabelClass!}">${msg("lastName")}</label>
                 </div>
@@ -40,7 +58,7 @@
                 </div>
             </div>
 
-            <div class="${properties.kcFormGroupClass!}">
+<!--            <div class="${properties.kcFormGroupClass!}">
                 <div class="${properties.kcLabelWrapperClass!}">
                     <label for="email" class="${properties.kcLabelClass!}">${msg("email")}</label>
                 </div>
@@ -57,11 +75,11 @@
                     </#if>
                 </div>
             </div>
-
+-->
             <#if !realm.registrationEmailAsUsername>
                 <div class="${properties.kcFormGroupClass!}">
                     <div class="${properties.kcLabelWrapperClass!}">
-                        <label for="username" class="${properties.kcLabelClass!}">${msg("username")}</label>
+                        <label for="username" class="${properties.kcLabelClass!}">${msg("emailORmobileNo")}</label>
                     </div>
                     <div class="${properties.kcInputWrapperClass!}">
                         <input type="text" id="username" class="${properties.kcInputClass!}" name="username"
@@ -76,7 +94,17 @@
                         </#if>
                     </div>
                 </div>
-            </#if>
+            </#if> 
+            
+       <!--     <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('mobileNumber',properties.kcFormGroupErrorClass!)}">
+		  <div class="${properties.kcLabelWrapperClass!}">
+		    <label for="user.attributes.mobileNumber" class="${properties.kcLabelClass!}">${msg("mobileNumber")}</label>
+		  </div>
+		  <div class="${properties.kcInputWrapperClass!}">
+		    <input type="text" id="user.attributes.mobileNumber" class="${properties.kcInputClass!}" name="user.attributes.mobileNumber"	
+		    value="${(register.formData['user.attributes.mobileNumber']!'')}"/>
+		  </div>
+	    </div> -->
 
             <#if passwordRequired??>
                 <div class="${properties.kcFormGroupClass!}">
@@ -117,6 +145,36 @@
                 </div>
             </#if>
 
+
+
+
+
+<#if acceptTermsRequired??>
+    <div class="${properties.kcFormGroupClass!}">
+        <script defer>
+            document.getElementById("termsLink").setAttribute("target", "_blank");
+        </script>
+        <div class="${properties.kcLabelWrapperClass!}" id="ssoTermsCondition">
+       <input type="checkbox" id="acceptTerms" name="terms" class="${properties.kcCheckboxInputClass!}"
+                value="${(register.formData.acceptTerms!'')}"
+                aria-invalid="<#if messagesPerField.existsError('terms')>true</#if>" />            
+<label for="acceptTerms" class="${properties.kcLabelClass!}">
+                ${msg("acceptTerms")} <a id=“termsLink” href="https://www.ezmall.com/faces/fe/jsps/termsCondition.jsp"
+                    target="_blank">Terms of Use </a> &amp; <a href="https://www.ezmall.com/faces/fe/jsps/privacy.jsp"
+                    target="_blank"> Privacy Policy</a>
+            </label>
+            
+        </div>
+    </div>
+</#if>
+
+
+
+
+
+
+
+
             <#if recaptchaRequired??>
                 <div class="form-group">
                     <div class="${properties.kcInputWrapperClass!}">
@@ -126,15 +184,18 @@
             </#if>
 
             <div class="${properties.kcFormGroupClass!}">
-                <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
-                    <div class="${properties.kcFormOptionsWrapperClass!}">
-                     <span><a href="${url.loginUrl}">${kcSanitize(msg("backToLogin"))?no_esc}</a></span>
-                    </div>
-                </div>
+               
 
                 <div id="kc-form-buttons" class="${properties.kcFormButtonsClass!}">
                     <input class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" type="submit" value="${msg("doRegister")}"/>
                 </div>
+
+		 <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
+                    <div class="${properties.kcFormOptionsWrapperClass!}">
+                        <span>Already have an account? <a href="${url.loginUrl}">Login</a></span>
+                    </div>
+                </div>
+
             </div>
         </form>
     </#if>

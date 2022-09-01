@@ -98,14 +98,10 @@
                 </div>
             <#else>
                 <#nested "show-username">
+                <h1 id="kc-page-title">Verify OTP</h1>
                 <div id="kc-username" class="${properties.kcFormGroupClass!}">
-                    <label id="kc-attempted-username">${auth.attemptedUsername}</label>
-                    <a id="reset-login" href="${url.loginRestartFlowUrl}">
-                        <div class="kc-login-tooltip">
-                            <i class="${properties.kcResetFlowIcon!}"></i>
-                            <span class="kc-tooltip-text">${msg("restartLoginTooltip")}</span>
-                        </div>
-                    </a>
+                    
+                    <label id="kc-attempted-username"> Enter the 6 digit OTP code sent to you mobile number ${auth.attemptedUsername}  <a id="reset-login" href="${url.loginRestartFlowUrl}"> Edit </a></label>
                 </div>
             </#if>
         </#if>
@@ -143,10 +139,28 @@
 
           <#if displayInfo>
               <div id="kc-info" class="${properties.kcSignUpClass!}">
-                  <div id="kc-info-wrapper" class="${properties.kcInfoAreaWrapperClass!}">
+                 <div id="kc-info-wrapper" class="${properties.kcInfoAreaWrapperClass!}">
                       <#nested "info">
                   </div>
               </div>
+              <div class="oloeSec">
+                <h3>one login one ecosystem</h3>
+                <ul class="oloeSecComp">
+                    <li><img src="https://cdn5.ezmall.com/0/india-sso/images/zee-news.svg" alt="" /></li>
+                    <li><img src="https://cdn5.ezmall.com/0/india-sso/images/zee-hindustan.svg" alt="" /></li>
+                    <li><img src="https://cdn5.ezmall.com/0/india-sso/images/zee-business.png" alt="" /></li>
+                    <li><img src="https://cdn5.ezmall.com/0/india-sso/images/wion.png" alt="" /></li>
+                    <li><img src="https://cdn5.ezmall.com/0/india-sso/images/health.svg" alt="" /></li>
+                   <!-- <li><img src="https://cdn5.ezmall.com/0/india-sso/images/" alt="" /></li>
+                    <li><img src="https://cdn5.ezmall.com/0/india-sso/images/" alt="" /></li>-->
+                    <li><img src="https://cdn5.ezmall.com/0/india-sso/images/bollywood.png" alt="" /></li>
+                   <li><img src="https://cdn5.ezmall.com/0/india-sso/images/cricket.svg" alt="" /></li>
+                </ul>
+            </div>
+            <div class="securityInfoSec">
+                <span class="securityIcon"><img src="https://cdn5.ezmall.com/0/india-sso/images/security-icon.png" alt="" /></span>
+                <span>Your Personal Information is 100% secured with us. We do not share your data with any third party</span>
+            </div>
           </#if>
         </div>
       </div>

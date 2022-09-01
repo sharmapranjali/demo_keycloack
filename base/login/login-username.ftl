@@ -10,9 +10,9 @@
                           method="post">
                         <#if !usernameHidden??>
                             <div class="${properties.kcFormGroupClass!}">
-                                <label for="username"
-                                       class="${properties.kcLabelClass!}"><#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmailOrMobileNumber")}<#else>${msg("email")}</#if></label>
-
+                                  <label for="username"
+                                       class="${properties.kcLabelClass!}"><#if !realm.registrationEmailAsUsername>${msg("mobileNumber")}</#if></label>
+                                       
                                 <input tabindex="1" id="username"
                                        aria-invalid="<#if messagesPerField.existsError('username')>true</#if>"
                                        class="${properties.kcInputClass!}" name="username"
@@ -53,7 +53,7 @@
                         <div id="kc-form-buttons" class="${properties.kcFormGroupClass!}">
                             <input tabindex="4"
                                    class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}"
-                                   name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
+                                   name="login" id="kc-login" type="submit" value="${msg("generateOTP")}"/>
                         </div>
                     </form>
                 </#if>
@@ -69,9 +69,6 @@
     <#elseif section = "socialProviders" >
         <#if realm.password && social.providers??>
             <div id="kc-social-providers" class="${properties.kcFormSocialAccountSectionClass!}">
-                <hr/>
-                <h4>${msg("identity-provider-login-label")}</h4>
-
                 <ul class="${properties.kcFormSocialAccountListClass!} <#if social.providers?size gt 3>${properties.kcFormSocialAccountListGridClass!}</#if>">
                     <#list social.providers as p>
                         <a id="social-${p.alias}" class="${properties.kcFormSocialAccountListButtonClass!} <#if social.providers?size gt 3>${properties.kcFormSocialAccountGridItem!}</#if>"
@@ -85,6 +82,10 @@
                         </a>
                     </#list>
                 </ul>
+                <div class="orSec">
+                    <hr/>
+                    <h4>${msg("identity-provider-login-label")}</h4>
+                </div>
             </div>
         </#if>
     </#if>
