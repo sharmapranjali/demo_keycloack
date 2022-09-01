@@ -1031,11 +1031,12 @@ ul#kc-totp-supported-apps {
     font-size: 12px;
     display: inline-block;
     margin-bottom: 0 !important;
+    color: #036AF5;
 }
 
 #kc-register-form #kc-terms-text label a,
 #kc-register-form #kc-terms-text label a:hover {
-    color: #f33;
+    color: #036AF5;
     text-decoration: none;
     font-weight: normal;
 }
@@ -1326,4 +1327,41 @@ h1#kc-page-title {
 .securityInfoSec img {
     width: 100%;
     height: auto;
+}
+
+#kc-attempted-username {
+    display: block;        
+    padding: 25px 38px;        
+    font-size: 16px;
+}
+#kc-sms-code-login-form .pf-c-form__label.pf-c-form__label-text,
+#kc-sms-code-login-form #kc-form-options,
+#kc-sms-code-login-form + #kc-info,
+#kc-sms-code-login-form ~ .oloeSec {
+    display: none;
+}
+
+.alert-error {
+    justify-content: center;
+    left: 50%;
+    top: 30px;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    transform: translateX(-50%);
+    max-width: 400px;
+}
+
+
+#kc-register-form #ssoTermsCondition label {
+    font-size: 12px;
+    left: 15px;
+    top: -4px;
+    color: #969696;
+}
+
+#kc-register-form #ssoTermsCondition a, #kc-register-form #ssoTermsCondition a:hover {
+    color: #036AF5;
+    text-decoration: none;
 }
