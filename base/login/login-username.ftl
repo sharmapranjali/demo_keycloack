@@ -21,7 +21,7 @@
 
                                 <#if messagesPerField.existsError('username')>
                                     <span id="input-error-username" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
-                                        ${kcSanitize(messagesPerField.get('username'))?no_esc}
+                                     Invalid Mobile Number  <!-- ${kcSanitize(messagesPerField.get('mobileNumber'))?no_esc}-->
                                     </span>
                                 </#if>
                             </div>
@@ -30,7 +30,7 @@
                         <div class="${properties.kcFormGroupClass!} ${properties.kcFormSettingClass!}">
                             <div id="kc-form-options">
                                 <#if realm.rememberMe && !usernameHidden??>
-                                    <div>
+                                    <div class="checkbox hide">
                                         <label>
                                             <#if login.rememberMe??>
                                                 <input tabindex="3" id="rememberMe" name="rememberMe" type="checkbox"

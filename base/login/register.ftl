@@ -2,26 +2,33 @@
 <@layout.registrationLayout displayMessage=!messagesPerField.existsError('firstName','lastName','email','username','password','password-confirm'); section>
     <#if section = "header">
         ${msg("registerTitle")}
+             <#elseif section = "socialProviders" >
+        <#if realm.password && social.providers??>
+            <div id="kc-social-providers" class="${properties.kcFormSocialAccountSectionClass!}">
+                <ul class="${properties.kcFormSocialAccountListClass!} <#if social.providers?size gt 3>${properties.kcFormSocialAccountListGridClass!}</#if>">
+                    <#list social.providers as p>
+                        <a id="social-${p.alias}" class="${properties.kcFormSocialAccountListButtonClass!} <#if social.providers?size gt 3>${properties.kcFormSocialAccountGridItem!}</#if>"
+                                type="button" href="${p.loginUrl}">
+                            <#if p.iconClasses?has_content>
+                                <i class="${properties.kcCommonLogoIdP!} ${p.iconClasses!}" aria-hidden="true"></i>
+                                <span class="${properties.kcFormSocialAccountNameClass!} kc-social-icon-text">${p.displayName!}</span>
+                            <#else>
+                                <span class="${properties.kcFormSocialAccountNameClass!}">${p.displayName!}</span>
+                            </#if>
+                        </a>
+                    </#list>
+                </ul>
+                 <div class="orSec">
+                    <hr/>
+                    <h4>${msg("identity-provider-login-label")}</h4>
+        </div>
+            </div>
+        </#if>
+
+        
+
     <#elseif section = "form">
-        <form id="kc-register-form" class="${properties.kcFormClass!}" action="${url.registrationAction}" method="post">
-         <!--   <div class="${properties.kcFormGroupClass!}">
-                <div class="${properties.kcLabelWrapperClass!}">
-                    <label for="firstName" class="${properties.kcLabelClass!}">${msg("firstName")}</label>
-                </div>
-                <div class="${properties.kcInputWrapperClass!}">
-                    <input type="text" id="firstName" class="${properties.kcInputClass!}" name="firstName"
-                           value="${(register.formData.firstName!'')}"
-                           aria-invalid="<#if messagesPerField.existsError('firstName')>true</#if>"
-                    />
-
-                    <#if messagesPerField.existsError('firstName')>
-                        <span id="input-error-firstname" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
-                            ${kcSanitize(messagesPerField.get('firstName'))?no_esc}
-                        </span>
-                    </#if>
-                </div>
-            </div> -->
-
+    <form id="kc-register-form" class="${properties.kcFormClass!}" action="${url.registrationAction}" method="post">
 <!--             <div class="${properties.kcFormGroupClass!}">
                 <div class="${properties.kcLabelWrapperClass!}">
                     <label for="middleName" class="${properties.kcLabelClass!}">${msg("middleName")}</label>
@@ -76,7 +83,42 @@
                 </div>
             </div>
 -->
-        <#if !realm.registrationEmailAsUsername>
+      
+        <div class="${properties.kcFormGroupClass!}">
+                <div class="${properties.kcLabelWrapperClass!}">
+                    <label for="firstName" class="${properties.kcLabelClass!}">${msg("firstName")}</label>
+                </div>
+                <div class="${properties.kcInputWrapperClass!}">
+                    <input type="text" id="firstName" class="${properties.kcInputClass!}" name="firstName"
+                           value="${(register.formData.firstName!'')}"
+                           aria-invalid="<#if messagesPerField.existsError('firstName')>true</#if>"
+                    />
+                    <#if messagesPerField.existsError('firstName')>
+                        <span id="input-error-firstname" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
+                            ${kcSanitize(messagesPerField.get('firstName'))?no_esc}
+                        </span>
+                    </#if>
+                </div>
+        </div>
+
+        <div class="${properties.kcFormGroupClass!}">
+                <div class="${properties.kcLabelWrapperClass!}">
+                    <label for="lastName" class="${properties.kcLabelClass!}">${msg("lastName")}</label>
+                </div>
+                <div class="${properties.kcInputWrapperClass!}">
+                    <input type="text" id="lastName" class="${properties.kcInputClass!}" name="lastName"
+                           value="${(register.formData.lastName!'')}"
+                           aria-invalid="<#if messagesPerField.existsError('lastName')>true</#if>"
+                    />
+                    <#if messagesPerField.existsError('lastName')>
+                        <span id="input-error-lastname" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
+                            ${kcSanitize(messagesPerField.get('lastName'))?no_esc}
+                        </span>
+                    </#if>
+                </div>
+        </div>  
+
+  <#if !realm.registrationEmailAsUsername>
                 <div class="${properties.kcFormGroupClass!}">
                     <div class="${properties.kcLabelWrapperClass!}">
                         <label for="username" class="${properties.kcLabelClass!}">${msg("mobileNumber")}</label>
@@ -93,8 +135,7 @@
                         </#if>
                     </div>
                 </div>
-            </#if>
-
+        </#if>
 
          <div class="${properties.kcFormGroupClass!}">
                 <div class="${properties.kcLabelWrapperClass!}">
@@ -103,14 +144,11 @@
                 <div class="${properties.kcInputWrapperClass!}">
                     <input type="text" id="email" class="${properties.kcInputClass!}" name="email"
                            value="${(register.formData.email!'')}" autocomplete="email"
-                    />
-
-                  
+                    /> 
                 </div>
-            </div>
+        </div>
 
-
-        <!--    <#if !realm.registrationEmailAsUsername>
+        <!--<#if !realm.registrationEmailAsUsername>
                 <div class="${properties.kcFormGroupClass!}">
                     <div class="${properties.kcLabelWrapperClass!}">
                         <label for="username" class="${properties.kcLabelClass!}">${msg("emailORmobileNo")}</label>
@@ -120,7 +158,6 @@
                                value="${(register.formData.username!'')}" autocomplete="username"
                                aria-invalid="<#if messagesPerField.existsError('username')>true</#if>"
                         />
-
                         <#if messagesPerField.existsError('username')>
                             <span id="input-error-username" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
                                 ${kcSanitize(messagesPerField.get('username'))?no_esc}
@@ -131,13 +168,13 @@
             </#if> -->
             
        <!--     <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('mobileNumber',properties.kcFormGroupErrorClass!)}">
-		  <div class="${properties.kcLabelWrapperClass!}">
-		    <label for="user.attributes.mobileNumber" class="${properties.kcLabelClass!}">${msg("mobileNumber")}</label>
-		  </div>
-		  <div class="${properties.kcInputWrapperClass!}">
-		    <input type="text" id="user.attributes.mobileNumber" class="${properties.kcInputClass!}" name="user.attributes.mobileNumber"	
-		    value="${(register.formData['user.attributes.mobileNumber']!'')}"/>
-		  </div>
+                <div class="${properties.kcLabelWrapperClass!}">
+                    <label for="user.attributes.mobileNumber" class="${properties.kcLabelClass!}">${msg("mobileNumber")}</label>
+                </div>
+                <div class="${properties.kcInputWrapperClass!}">
+                    <input type="text" id="user.attributes.mobileNumber" class="${properties.kcInputClass!}" name="user.attributes.mobileNumber"	
+                    value="${(register.formData['user.attributes.mobileNumber']!'')}"/>
+                </div>
 	    </div> -->
 
         <!--    <#if passwordRequired??>
@@ -208,20 +245,19 @@
             </#if>
 
             <div class="${properties.kcFormGroupClass!}">
-               
-
                 <div id="kc-form-buttons" class="${properties.kcFormButtonsClass!}">
                     <input class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" type="submit" value="${msg("generateOTP")}"/>
                 </div>
-
-		 <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
+            <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
                     <div class="${properties.kcFormOptionsWrapperClass!}">
                         <span>Already have an account? <a href="${url.loginUrl}">Login</a></span>
                     </div>
                 </div>
-
             </div>
         </form>
+        
+   
+
         
          <div class="oloeSec">
                 <h3>one login one ecosystem</h3>

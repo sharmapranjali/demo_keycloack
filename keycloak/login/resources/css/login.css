@@ -1157,16 +1157,20 @@ div.login-pf-page .card-pf {
     border-radius: 4px;
     padding: 20px;
 }
+
 .logoBox {
     display: none;
 }
+
 h1#kc-page-title {
     margin: 50px 0;
     color: #2131BE;
 }
+
 #kc-content-wrapper .form-group {
     position: relative;
 }
+
 #kc-content-wrapper .pf-c-form-control {
     width: 100%;
     height: 54px;
@@ -1176,18 +1180,23 @@ h1#kc-page-title {
     transition: all ease-in-out 0.3s;
     font-size: 18px;
 }
-#kc-content-wrapper .pf-c-form-control:focus{
+
+#kc-content-wrapper .pf-c-form-control:focus {
     border: 1px solid #2131BE;
 }
+
 #kc-content-wrapper .pf-c-form-control.success {
     border: 1px solid #06B145;
 }
+
 #kc-content-wrapper .pf-c-form-control[aria-invalid="true"] {
     border: 1px solid #B10606;
 }
+
 #kc-content-wrapper .pf-c-form__helper-text.pf-m-error {
     color: #B10606;
 }
+
 #kc-content-wrapper .form-group label,
 #kc-content-wrapper .form-group .pf-c-form__label {
     display: block;
@@ -1203,6 +1212,7 @@ h1#kc-page-title {
     left: 10px;
     z-index: 9;
 }
+
 #kc-form-buttons #kc-login,
 #kc-form-buttons input {
     height: 54px;
@@ -1212,38 +1222,46 @@ h1#kc-page-title {
     text-transform: capitalize;
     font-size: 18px;
 }
+
 #kc-form-buttons #kc-login[disabled],
-#kc-form-buttons input[disabled]{
+#kc-form-buttons input[disabled] {
     background: #5262EC;
     color: #9FA9FC;
 }
+
 #kc-social-providers ul a,
-#kc-form-buttons input:focus{
+#kc-form-buttons input:focus {
     height: 54px;
     border-radius: 4px;
 }
+
 #kc-social-providers #social-google,
 #kc-social-providers #social-facebook {
     background: #F2F4F8;
     color: #8993AD;
     text-transform: capitalize;
 }
-#kc-social-providers ul a i{
+
+#kc-social-providers ul a i {
     color: #8993AD;
 }
-#kc-social-providers hr{
+
+#kc-social-providers hr {
     background: #000;
 }
+
 #kc-social-providers h4 {
     text-transform: none;
     font-size: 16px;
     font-weight: bold;
     top: 16px;
 }
+
 #kc-info #kc-info-wrapper {
     font-size: 15px;
     color: #000;
 }
+
 #kc-info #kc-registration a {
     text-decoration: none;
     text-transform: none;
@@ -1256,88 +1274,104 @@ h1#kc-page-title {
 #kc-content #kc-content-wrapper {
     position: relative;
 }
-#kc-content #kc-content-wrapper #kc-form{
+
+#kc-content #kc-content-wrapper #kc-form {
     padding-top: 200px;
 }
+
 #kc-social-providers {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
 }
+
 #kc-social-providers ul {
     padding-top: 0;
 }
+
 .orSec {
     display: block;
     position: relative;
     width: 100%;
 }
+
 #kc-info #kc-info-wrapper {
     padding: 50px 0 40px;
 }
+
 .oloeSec h3 {
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
     margin: 0 0 25px;
 }
+
 .oloeSecComp {
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
     display: flex;
     flex-wrap: nowrap;
-    
+
     scrollbar-width: none;
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
 }
+
 .oloeSecComp::-webkit-scrollbar {
     width: 0;
     display: none;
 }
+
 .oloeSecComp li {
     flex: 0 0 auto;
 }
-.oloeSecComp li + li {
+
+.oloeSecComp li+li {
     margin-left: 10px;
 }
+
 .oloeSecComp img {
     height: 24px;
     width: auto;
 }
+
 .securityInfoSec {
     display: flex;
     align-items: center;
     padding: 0 30px;
     margin: 30px 0 25px;
 }
+
 .securityInfoSec span {
     flex: 0 0 100%;
     color: #009844;
     line-height: normal;
     font-size: 10px;
 }
+
 .securityInfoSec span.securityIcon {
     max-width: 20px;
     margin-right: 5px;
 }
+
 .securityInfoSec img {
     width: 100%;
     height: auto;
 }
 
 #kc-attempted-username {
-    display: block;        
-    padding: 25px 38px;        
+    display: block;
+    padding: 25px 38px;
     font-size: 16px;
 }
+
 #kc-sms-code-login-form .pf-c-form__label.pf-c-form__label-text,
 #kc-sms-code-login-form #kc-form-options,
-#kc-sms-code-login-form + #kc-info,
-#kc-sms-code-login-form ~ .oloeSec {
+#kc-sms-code-login-form+#kc-info,
+#kc-sms-code-login-form~.oloeSec {
     display: none;
 }
 
@@ -1361,7 +1395,8 @@ h1#kc-page-title {
     color: #969696;
 }
 
-#kc-register-form #ssoTermsCondition a, #kc-register-form #ssoTermsCondition a:hover {
+#kc-register-form #ssoTermsCondition a,
+#kc-register-form #ssoTermsCondition a:hover {
     color: #036AF5;
     text-decoration: none;
 }
@@ -1371,15 +1406,19 @@ h1#kc-page-title {
     font-size: 16px;
     text-align: center;
 }
-#kc-register-form #kc-form-options a{
+
+#kc-register-form #kc-form-options a {
     font-size: 16px;
 }
+
 .orSec {
     margin-top: 10px;
 }
+
 #kc-register-form #ssoTermsCondition {
     margin-top: 20px;
 }
+
 #kc-form-login #kc-form-options {
     padding: 0px 0 25px;
     position: relative;
@@ -1388,6 +1427,7 @@ h1#kc-page-title {
     text-align: right;
     color: #373636;
 }
+
 #kc-form-login #kc-form-options label {
     left: inherit;
     top: inherit;
@@ -1397,100 +1437,66 @@ h1#kc-page-title {
     align-items: center;
     justify-content: right;
 }
+
 #kc-form-login #kc-form-options label #rememberMe {
     padding: 0;
     margin: 0 5px 0;
     height: auto;
     border: 1px solid #BABABC;
 }
+
 #kc-register-form #kc-form-options a {
 
     display: inline-block;
 
 }
 
-
-
 #kc-social-providers #social-google i::before,
 
 #kc-social-providers #social-facebook i::before {
-
     display: none;
-
 }
-
-
 
 #kc-social-providers #social-google i,
 
 #kc-social-providers #social-facebook i {
-
     width: 24px;
-
     height: 24px;
-
     background-position: center center;
-
     display: inline-block;
-
 }
-
-
 
 #kc-social-providers #social-google i {
-
     background-image: url(https://cdn5.ezmall.com/0/india-sso/images/google.png);
-
     display: inline-block;
-
 }
-
-
 
 #kc-social-providers #social-facebook i {
-
     background-image: url(https://cdn5.ezmall.com/0/india-sso/images/fb.png);
-
 }
-
-
 
 #kc-social-providers #social-google span,
-
 #kc-social-providers #social-facebook span {
-
     font-size: 0px;
-
 }
-
-
 
 #kc-social-providers #social-google span::before {
-
     content: "Login with Google";
-
     font-size: 12px;
-
     font-weight: 600;
-
 }
 
-
-
 #kc-social-providers #social-facebook span::before {
-
     content: "Login with Facebook";
-
     font-size: 12px;
-
     font-weight: 600;
-
 }
 
 .oloeSecComp img {
-
     height: auto;
-
     width: auto;
+}
 
+#kc-content #kc-content-wrapper #kc-register-form {
+    padding-top: 200px;
 }
