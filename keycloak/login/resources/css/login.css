@@ -1480,17 +1480,31 @@ h1#kc-page-title {
     font-size: 0px;
 }
 
-#kc-social-providers #social-google span::before {
+.kc-social-signup #social-google span::before {
+    content: "Sign up with Google";
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.kc-social-signup #social-facebook span::before {
+    content: "Sign up with Facebook";
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+ #social-google span::before {
     content: "Login with Google";
     font-size: 12px;
     font-weight: 600;
 }
 
-#kc-social-providers #social-facebook span::before {
+ #social-facebook span::before {
     content: "Login with Facebook";
     font-size: 12px;
     font-weight: 600;
 }
+
 
 .oloeSecComp img {
     height: auto;

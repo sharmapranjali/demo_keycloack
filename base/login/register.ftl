@@ -4,7 +4,7 @@
         ${msg("registerTitle")}
              <#elseif section = "socialProviders" >
         <#if realm.password && social.providers??>
-            <div id="kc-social-providers" class="${properties.kcFormSocialAccountSectionClass!}">
+            <div id="kc-social-providers" class="${properties.kcFormSocialAccountSectionClass!} kc-social-signup">
                 <ul class="${properties.kcFormSocialAccountListClass!} <#if social.providers?size gt 3>${properties.kcFormSocialAccountListGridClass!}</#if>">
                     <#list social.providers as p>
                         <a id="social-${p.alias}" class="${properties.kcFormSocialAccountListButtonClass!} <#if social.providers?size gt 3>${properties.kcFormSocialAccountGridItem!}</#if>"
@@ -20,7 +20,7 @@
                 </ul>
                  <div class="orSec">
                     <hr/>
-                    <h4>${msg("identity-provider-login-label")}</h4>
+                    <h4>${msg("identity-provider-signup-label")}</h4>
         </div>
             </div>
         </#if>
