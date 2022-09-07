@@ -1481,13 +1481,13 @@ h1#kc-page-title {
 }
 
 .kc-social-signup #social-google span::before {
-    content: "Sign up with Google";
+    content: "Signup with Google";
     font-size: 12px;
     font-weight: 600;
 }
 
 .kc-social-signup #social-facebook span::before {
-    content: "Sign up with Facebook";
+    content: "Signup with Facebook";
     font-size: 12px;
     font-weight: 600;
 }
