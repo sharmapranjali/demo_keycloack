@@ -151,8 +151,8 @@
                     <li><img src="https://cdn5.ezmall.com/0/india-sso/images/zee-business.png" alt="" /></li>
                     <li><img src="https://cdn5.ezmall.com/0/india-sso/images/wion.png" alt="" /></li>
                     <li><img src="https://cdn5.ezmall.com/0/india-sso/images/health.svg" alt="" /></li>
-                   <!-- <li><img src="https://cdn5.ezmall.com/0/india-sso/images/" alt="" /></li>
-                    <li><img src="https://cdn5.ezmall.com/0/india-sso/images/" alt="" /></li>-->
+                   <!-- <li><img src="https://cdn5.ezmall.com/0/india-sso/images/" alt="" /></li>-->
+                   <li><img style="height: 26px; width: 60px;" src="https://cdn3.ezmall.com/0/media/css/frontend/images/webp/ezmall_logo.webp" alt="" /></li>
                     <li><img src="https://cdn5.ezmall.com/0/india-sso/images/bollywood.png" alt="" /></li>
                    <li><img src="https://cdn5.ezmall.com/0/india-sso/images/cricket.svg" alt="" /></li>
                 </ul>
